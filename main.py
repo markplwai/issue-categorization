@@ -52,7 +52,7 @@ def filter_issues(issues: list[list], age: int) -> list[list]:
                 continue
             try:
                 issue_age = (current_date - issue[0]).days  # type: ignore
-                if issue_age >= age:
+                if issue_age <= age:
                     filtered_issues.append(issue)
             except Exception as e:
                 print(colored("[ERROR]", "red", attrs=["bold"]),
