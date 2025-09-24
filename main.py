@@ -164,7 +164,7 @@ async def issues_to_api_inputs(issues: list[list]) -> list[dict]:
             b64s = await screenshot_urls(urls)
             for b in b64s:
                 content_blocks.append(
-                    {"type": "input_image", "image_url": {"url": f"data:image/jpeg;base64,{b}"}}
+                    {"type": "input_image", "image_url": f"data:image/jpeg;base64,{b}"}
                 )
 
         messages.append({"role": "user", "content": content_blocks})
