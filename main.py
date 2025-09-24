@@ -26,7 +26,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
 
 ### GLOBALS ###
 CLIENT: OpenAI = OpenAI()
-DEBUG = 1
+DEBUG = 0
 
 ### FUNCTIONS ###
 # Issue loader
