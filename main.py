@@ -217,7 +217,7 @@ async def screenshot_urls(urls: list[str], page: Page) -> list[str]:
     return [r for r in results if r]
 
 # Convert issues to API input format
-async def create_inputs(issues: list[Issue], concurrency: int = 20) -> list[dict]:
+async def create_inputs(issues: list[Issue], concurrency: int = 10) -> list[dict]:
     """
     Convert issues into Responses API input format.
     Each issue -> one user message with text + all screenshots.
