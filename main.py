@@ -439,7 +439,7 @@ def main():
           "Sending issues to bucket-defining assistant...", end="\r")
     buckets: list[Bucket] = ai_make_buckets(inputs)
     print(colored("[PROGRESS]", "light_green", attrs=["bold"]),
-          "Sending issues to bucket-defining assistant...", colored("Done.", "light_green"), 
+          "Sending issues to bucket-defining assistant...", colored("Done.", "light_green"),
           f"{len(buckets)} buckets defined.")
     if DEBUG:
         print(colored("[DEBUG]", "cyan"), f"Buckets: {buckets}\n")
@@ -447,7 +447,7 @@ def main():
     ### AI ISSUE CATEGORIZATION W/ NEW CATEGORIES ###
 
     print(colored("[PROGRESS]", "light_green", attrs=["bold"]),
-          "Categorizing issues into buckets...", end="\r")
+          "Categorizing issues into buckets...")
     categorizations: list[Categorization] = ai_categorize_issues(inputs, buckets)
     bucketed_issues: list[BucketedIssue] = [
         BucketedIssue(
